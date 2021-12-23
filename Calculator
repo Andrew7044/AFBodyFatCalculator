@@ -1,0 +1,22 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    double waist;
+    double neck;
+    double height;
+    std::cout << "Input Waist"<<endl;
+    cin >> waist;
+    std::cout << "Input neck" << endl;
+    cin >> neck;
+    std::cout << "Input height in inches" << endl;
+    cin >> height;
+
+    double minus = waist - neck;
+    
+    double bodyfat = (86.01 * log10(minus)) - (70.041 * log10(height)) + 36.76;
+    cout << "Body fat is: "<< bodyfat;
+
+}
+
